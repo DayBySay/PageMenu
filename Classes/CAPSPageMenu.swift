@@ -271,7 +271,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         
         // Add hairline to menu scroll view
         if addBottomMenuHairline {
-            var menuBottomHairline : UIView = UIView()
+            let menuBottomHairline : UIView = UIView()
             
             menuBottomHairline.translatesAutoresizingMaskIntoConstraints = false
             
@@ -730,7 +730,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
                     menuItemRightBound = CGRectGetMaxX(menuItems[menuItems.count-1].frame)
                     
                     if (tappedPoint.x >= menuItemLeftBound && tappedPoint.x <= menuItemRightBound) {
-                        for (index, controller) in controllerArray.enumerate() {
+                        for (index, _) in controllerArray.enumerate() {
                             menuItemLeftBound = CGRectGetMinX(menuItems[index].frame)
                             menuItemRightBound = CGRectGetMaxX(menuItems[index].frame)
                             
